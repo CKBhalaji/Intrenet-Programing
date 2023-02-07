@@ -1,0 +1,47 @@
+
+form{
+    text-align: center;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+hr{
+    border-width: 5px;
+}
+.text-scroll{
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+label{
+    width: 180px;
+    display: inline-block;
+    padding: 5px;
+    background-color: rgb(33, 157, 234);
+    border-radius: 40px;
+}
+input,select{
+    text-align: center;
+    color: white;
+    height: 25px;
+    width: 177px;
+    background-color: rgb(93, 230, 78);
+    border-radius: 40px;
+}
+h1{
+    font-family:'Montserrat Alternates', sans-serif;
+}
+body{
+    margin: 0;
+    background-image: linear-gradient(to right, #2ae198 0%, #97D9E1 100%);
+}
+p{
+    text-align: center;font-weight: bold;
+}
+textarea{
+    background-color: rgb(44, 10, 156);
+    color: white;
+}
+button{
+    background-color: rgb(97, 7, 7);
+    color: white;
+}

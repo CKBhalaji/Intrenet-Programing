@@ -1,0 +1,63 @@
+.name{
+    padding-top: 30px;
+    background-image: linear-gradient(to right, rgb(30, 0, 255) , rgb(0, 195, 255));
+    padding-bottom: 0;
+}
+body{
+    margin: 0;
+    background-image:url('loginbg.png');
+}
+h1{
+    text-align: center;
+    font-weight: bolder;
+    color: #13005A;
+}
+.text-scroll{
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+span{
+    color: white;
+    padding-top: 2px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    word-spacing: 2px;
+}
+.discount{
+    background-color: blue;
+}
+.code{
+    background-color: red;
+}
+a{
+    display: inline-block;
+    position: relative;
+    text-decoration:none;
+    padding-right: 8px;
+    color: red;
+    font-weight: bold;
+    bottom: 105px;
+    left: 85%;    
+    font-size: large;
+
+}
+a:hover{
+    text-shadow: 1px 1px rgb(31, 251, 7);
+}
+p{
+    text-align: center;
+    font-size: 24px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-spacing: 8px;
+    color:rgb(249, 119, 5);
+}
+.main{
+    font-size: 80px;
+    word-spacing: 40px;
+    margin: 0;
+    color:lavender;
+    text-shadow:4px 4px black;
+}
