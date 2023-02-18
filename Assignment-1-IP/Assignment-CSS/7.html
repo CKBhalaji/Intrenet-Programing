@@ -1,0 +1,33 @@
+<html>
+<head>
+    <style>
+    .zoom-in-out-box 
+    {   
+        margin: 24px;
+        width: 100px;
+        height: 100px;
+        background: #f500cc;
+        animation: zoom-in-zoom-out 1s ease innite;
+    }
+    @keyframes zoom-in-zoom-out 
+    {
+        0% 
+        {
+            transform: scale(1px, 1px);
+        }
+        50% 
+        {
+            transform: scale(10px, 10px);
+        }
+        100% 
+        {
+            transform: scale(1px, 1px);
+        }
+    }
+    </style>
+<title> CSS zoom in zoom out animation</title>
+</head>
+<body>
+    <div class="zoom-in-out-box">HELLO</div>
+</body>
+</html>
