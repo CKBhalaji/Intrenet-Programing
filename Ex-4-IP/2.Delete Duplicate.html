@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delete Diplicate</title>
+</head>
+<body>    
+    <h1>Before Deleting the duplicate-->:</h1>
+    <p id="before" style="font-size: large;"></p>
+    <h1>After Deleting the duplicate-->:</h1>
+    <p id="after" style="font-size: large;"></p>
+    <script>
+        let array = ["apple", "BaNaNa", "banana", "cherry", "Apple"];
+        let unique = {};
+        for (let i = 0; i < array.length; i++) 
+        {
+            let item = array[i].toLowerCase();
+            unique[item] = true;
+        }
+        let result = Object.keys(unique);
+        console.log(result);
+        document.getElementById("before").innerHTML = array;
+        document.getElementById("after").innerHTML = result;
+    </script>
+</body>
+</html>

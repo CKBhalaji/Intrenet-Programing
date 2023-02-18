@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Check Website</title>
+</head>
+<body>
+    <P>Eneter the character-->: <input type="text" id="str"></P>
+    <br>
+    <button id="but" onclick="Website()">Submit</button>
+    <br>
+    <p id="ans"></p>
+    <Script>
+        function Website() 
+        {
+            var value=document.getElementById("str").value;
+            const websiteRegex = /^(https?:\/\/)?([a-z\d-]+\.){1,}[a-z]{2,}(\/[^\s]*)?$/i;
+            if(websiteRegex.test(value))
+            {
+                document.getElementById("ans").innerHTML="Correct Webite";
+            }
+            else
+            {
+                document.getElementById("ans").innerHTML="Wrong Website";
+
+            }
+        }
+        </Script>
+</body>
+</html>

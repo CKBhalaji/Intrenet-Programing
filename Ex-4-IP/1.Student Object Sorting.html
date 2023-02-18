@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Object Sorting</title>
+</head>
+<body>
+    <script>
+        const students = [
+                { name: "Ravikumar", math: 90, science: 80, english: 85 },
+                { name: "Ramishan", math: 70, science: 85, english: 75 },
+                { name: "C.K.Bhalaji", math: 80, science: 75, english: 90 },
+                { name: "Subbiah", math: 85, science: 90, english: 80 }];
+        document.write("<br>BEFORE SORTING:<br>")
+        for(i=0;i<students.length;i++)
+        {
+            document.write("<br>Name:"+students[i].name+"  Maths:"+students[i].math+"  Science:"+students[i].science+"  English:"+students[i].english+"<br>");
+        }
+        function getTotalScore(student) 
+        {
+            return student.math + student.science + student.english;
+        }
+        students.sort((a, b) => getTotalScore(b) - getTotalScore(a));
+        document.write("<br>AFTER SORTING:<br>")
+        for(i=0;i<students.length;i++)
+        {
+            document.write("<br>Name:"+students[i].name+"  Maths:"+students[i].math+"  Science:"+students[i].science+"  English:"+students[i].english+"<br>");
+        }
+    </script>
+</body>
+</html>
