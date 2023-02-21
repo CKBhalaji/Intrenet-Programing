@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  let e = document.forms["myForm"]["mail"].value;
+  let g = document.forms["myForm"]["gender"].value;
+  let p = document.forms["myForm"]["password"].value;
+  let cp = document.forms["myForm"]["cpassword"].value;
+  let m = document.forms["myForm"]["number"].value;
+  let d = document.forms["myForm"]["date"].value;
+  if (x == "") {
+    alert("name must be filled out");
+    return false;
+  }
+  if (e == "") {
+    alert("email must be filled out");
+    return false;
+  }
+  if (g == "") {
+    alert("gender must be choosen");
+    return false;
+  }
+  if (p == "") {
+    alert("password must be filled out");
+    return false;
+  }
+  if (cp == "") {
+    alert("Confirm your password");
+    return false;
+  }
+  if (cp !=p) {
+    alert("password mismatch");
+    return false;
+  }
+  if (m == "") {
+    alert("Mobile NO must be filled out");
+    return false;
+  }
+  if (d == "") {
+    alert("DOB not given");
+    return false;
+  }
+}
+</script>
+<style>
+form{
+    background-color:gray;
+    width: 40%;
+  }
+</style>
+</head>
+<body>
+<center>
+  <h2>Form Validation</h2>
+  <form name="myForm" onsubmit="return validateForm()" method="post">
+  <table> 
+    <tr>
+      <td>Enter your Name:<br><br></td>
+      <td><input type="text" name="fname"  pattern="[a-z]{1,15}" title="name should only contain letters"><br><br></td>
+      <tr>
+        <td>Enter your mail ID:<br><br></td> 
+        <td><input type="email" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="enter a proper email iD"><br><br></td>
+      </tr>
+      <tr>
+        <td>choose your gender<br><br></td>
+        <td><input type="radio" name="gender">male <input type="radio" name="gender">Female<br><br></td> 
+      </tr>
+    <tr>
+      <td>Create your password:<br><br></td> 
+      <td><input type="password" name="password" pattern=".{8,}" title="Eight or more characters"><br><br></td>
+    </tr>
+    <tr>
+      <td>Confirm your password:<br><br></td> 
+      <td><input type="password" name="cpassword"><br><br></td>
+    </tr>
+    <tr>
+      <td>Mobile No:<br><br></td> 
+      <td><input type="number" name="number" pattern="/^\d{10}$/"><br><br></td>
+    </tr>
+    <tr>
+      <td>choose your DOB:<br><br></td> 
+      <td><input type="date" name="date"><br><br></td>
+    </tr>
+    <tr>
+      <tr>
+        <td>Enter your Address<br><br></td> 
+        <td><textarea rows="4" cols="15" name="address"></textarea><br><br></td>
+      </tr>
+      <tr>
+        <td>choose your Location:<br><br></td> 
+        <td>
+        <select id="state" name="state" >
+          <option value="Tamilnadu">Tamilnadu</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Andhra pradesh">Andhra pradesh</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value=">Assam">Assam</option>
+      </select><br><br>
+      </td>
+    </select>
+      </tr>
+</table> 
+<td colspan="2"><input type="submit" value="submit"></td>
+<td colspan="2"> <input type="reset" value="clear"></td>
+<br><br>
+</form>
+
+</center>
+</body>
+</html>
