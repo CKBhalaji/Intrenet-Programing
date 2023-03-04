@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    
+    $("#div1").fadeToggle(2000);
+    $("#div2").fadeToggle(2000);
+    
+   
+  });
+});
+</script>
+</head>
+<body>
+<button>Click</button><br><br>
+<div>
+<img id="div1" src="bg1.jpg" width="50%">
+<img id="div2" src="bg2.jpg" width="50%" hidden>
+</div>
+</body>
+</html>

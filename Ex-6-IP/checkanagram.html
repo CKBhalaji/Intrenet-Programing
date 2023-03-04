@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  
+  <center><h2>Anagram Checker</h2></center>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <center><b>
+  <input type="text" id="input1" placeholder="Enter string 1"><br><br>
+  <input type="text" id="input2" placeholder="Enter string 2"><br><br>
+  <button id="checkBtn">Check</button>
+  <p id="result"></p>
+</b>
+</center>
+  <script>
+    
+    $(document).ready(function() {
+      $('#checkBtn').click(function() {
+        var str1 = $('#input1').val();
+        var str2 = $('#input2').val();
+        str1 = str1.toLowerCase().replace(/[^a-z0-9]/g, '');
+        str2 = str2.toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (str1.length !== str2.length) {
+          $('#result').text('Not anagram');
+          return;
+        }
+        var arr1 = str1.split('').sort();
+        var arr2 = str2.split('').sort();
+        for (var i = 0; i < arr1.length; i++) {
+          if (arr1[i] !== arr2[i]) {
+            $('#result').text('Not anagram');
+            return;
+          }
+        }
+        $('#result').text('Anagram');
+      });
+    });
+  </script>
+</body>
+</html>
