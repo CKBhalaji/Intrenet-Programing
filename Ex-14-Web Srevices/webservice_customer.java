@@ -1,19 +1,14 @@
-
-package IP;
-
+package Ex_14_IP;
 import java.sql.*;
 import java.util.*;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-
 @WebService(serviceName = "Ex14")
 public class customer_service {
     @WebMethod(operationName = "edit_emails")
     public String edit_emails(@WebParam(name = "id") int id, @WebParam(name = "email") String email) {
-        
         List<Customer> customers = new ArrayList<>();
-       
         try
         {
             Connection c=DriverManager.getConnection("jdbc:derby://localhost:1527/customer");
@@ -32,8 +27,6 @@ public class customer_service {
          }   
         } 
         catch (SQLException ex){} 
-        
-        
          return customers.toString(); 
         }
       @WebMethod(operationName = "add_customers")
@@ -58,8 +51,6 @@ public class customer_service {
          }   
         } 
         catch (SQLException ex) {}
-        
-        
         return customers.toString(); 
     }
     
