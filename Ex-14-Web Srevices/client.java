@@ -8,7 +8,7 @@
  *
  * @author bhala
  */
-package IP;
+package Ex_14_IP;
 import java.util.*;
 public class client {
     public static void main(String[] args) {
